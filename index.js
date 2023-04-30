@@ -21,7 +21,7 @@ app.get("/results", (req,res) => {
 })
 
 app.get("/results_clear", (req, res) => {
-    requests_obj = {};
+    requests_obj = [];
     res.send("Cleared! The current object is "+JSON.stringify(requests_obj));
 })
 
