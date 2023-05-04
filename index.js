@@ -11,7 +11,10 @@ app.get('/', (req, res) => {
         var bufferObj = Buffer.from(base64string, "base64");
         var decodedString = bufferObj.toString("utf8");
         
+        var time_now = new Date().getTime();
+        
         current_request_arr.push(req.query.ip);
+        current_request_arr.push(time_now);
         current_request_arr.push(req.query.clkurl);
         
         requests_obj.push(current_request_arr);
