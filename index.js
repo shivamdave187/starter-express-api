@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
         
         current_request_arr.push(req.query.ip);
         current_request_arr.push(time_now);
-        current_request_arr.push(req.query.clkurl);
+        current_request_arr.push(decodedString);
         
         requests_obj.push(current_request_arr);
         
